@@ -1,7 +1,6 @@
 package com.example.mynews.ui.base;
 
-import android.app.Activity;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -25,12 +24,19 @@ public class BaseActivity extends FragmentActivity {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
     }
+
+    protected void openActivity(Class<?> pClass) {
+        Intent mIntent = new Intent(this, pClass);
+        this.startActivity(mIntent);
+    }
+
+
     /**
      * 设置沉浸式状态栏
      */
     protected void setStatusBar() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            final ViewGroup linear_bar = (ViewGroup) findViewById(R.id.rl_title);
+            final ViewGroup linear_bar = (ViewGroup) findViewById(R.id.bar_layout);
             final int statusHeight = getStatusBarHeight();
             linear_bar.post(new Runnable() {
                 @Override
@@ -60,5 +66,4 @@ public class BaseActivity extends FragmentActivity {
         }
         return 0;
     }
-
 }

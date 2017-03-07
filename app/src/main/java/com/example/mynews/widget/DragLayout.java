@@ -114,8 +114,8 @@ public class DragLayout extends FrameLayout {
         /**
          * 当拖拽的子View，手势释放的时候回调的方法， 然后根据左滑或者右滑的距离进行判断打开或者关闭
          * @param releasedChild
-         * @param xvel
-         * @param yvel
+         * @param xvel 水平方向的速度（右拖拽为正，左拖拽为负）
+         * @param yvel 垂直方向的速度（上拖拽为负，下拖拽为正）
          */
         @Override
         public void onViewReleased(View releasedChild, float xvel, float yvel) {
@@ -259,6 +259,10 @@ public class DragLayout extends FrameLayout {
     @Override
     public boolean onTouchEvent(MotionEvent e) {
         try {
+            /**
+             * 处理拦截到的事件
+             * 这个方法会在返回前分发事件
+             */
             dragHelper.processTouchEvent(e);
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -338,6 +342,8 @@ public class DragLayout extends FrameLayout {
     @Override
     public void computeScroll() {
         if (dragHelper.continueSettling(true)) {
+            //如果返回true，还需要继续执行
+            //参数传this(child所在的ViewGroup)
             ViewCompat.postInvalidateOnAnimation(this);
         }
     }
@@ -368,11 +374,16 @@ public class DragLayout extends FrameLayout {
     public void open() {
         open(true);
     }
-
+    /**
+     * 开启时是否平滑
+     * @param animate true 平滑
+     *                 false 不平滑
+     */
     public void open(boolean animate) {
         if (animate) {
-            //继续滑动
+            //继续滑动,触发一个平滑动画
             if (dragHelper.smoothSlideViewTo(vg_main, range, 0)) {
+                //返回true代表还没有移动到指定位置，需要刷新界面
                 ViewCompat.postInvalidateOnAnimation(this);
             }
         } else {
