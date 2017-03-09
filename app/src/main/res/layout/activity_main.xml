@@ -5,7 +5,7 @@
     android:id="@+id/drag_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/ic_main_left_bg"
+    android:background="@mipmap/head_bg"
     tools:context="com.example.mynews.ui.MainActivity">
     <!--1.底部功能(左侧侧滑功能布局)-->
     <include layout="@layout/left_view_layout"/>
@@ -29,13 +29,13 @@
                 android:layout_height="fill_parent"
                 >
 
-                <TextView
-                    android:id="@+id/iv_noimg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="中间内容容器..."
-                    />
+                <fragment
+                    android:id="@+id/main_info_fragment"
+                    class="com.example.mynews.fragment.MainInfoFragment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    tools:layout="@layout/main_info_fragment_layout"/>
+
             </FrameLayout>
         </LinearLayout>
     </com.example.mynews.widget.CustomRelativeLayout>

@@ -3,7 +3,7 @@
                 android:id="@+id/bar_layout"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
-                android:background="@color/color_white"
+                android:background="@color/mask_tags_8"
                 android:gravity="bottom">
 
     <RelativeLayout
@@ -13,12 +13,12 @@
 
         <ImageView
             android:id="@+id/top_bar_icon"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:scaleType="fitXY"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/icon_avatar_white"
             />
 
         <TextView
@@ -28,23 +28,17 @@
             android:layout_centerInParent="true"
             android:text="@string/app_name"
             android:textSize="16sp"
-            />
+            android:textColor="@color/color_white"/>
         <!--搜索图标-->
+
         <Button
             android:id="@+id/top_bar_search_btn"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginRight="8dp"
-            android:background="@drawable/icon_search"/>
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="1px"
-            android:layout_alignParentBottom="true"
-            android:background="#EEEEEE"
-            android:scaleType="fitXY"
-            />
+            android:background="@drawable/btn_search_seletor"
+            android:layout_alignBottom="@+id/top_bar_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="11dp"/>
     </RelativeLayout>
 </RelativeLayout>

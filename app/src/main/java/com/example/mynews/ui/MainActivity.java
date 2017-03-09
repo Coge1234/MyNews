@@ -3,16 +3,21 @@ package com.example.mynews.ui;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 import com.example.mynews.R;
+import com.example.mynews.adapter.LeftItemAdapter;
+import com.example.mynews.common.DefineView;
 import com.example.mynews.ui.base.BaseActivity;
 import com.example.mynews.widget.DragLayout;
 import com.nineoldandroids.view.ViewHelper;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements DefineView {
 
     private DragLayout drag_layout;
     private ImageView top_bar_icon;
+    private ListView lv_left_menu;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,19 +29,25 @@ public class MainActivity extends BaseActivity {
         bindData();
     }
 
+    public DragLayout getDrag_layout(){
+        return drag_layout;
+    }
 
-    private void initView() {
+    public void initView() {
         drag_layout = (DragLayout) findViewById(R.id.drag_layout);
         top_bar_icon = (ImageView) findViewById(R.id.top_bar_icon);
+        lv_left_menu =(ListView)findViewById(R.id.lv_left_main);
     }
-
+    @Override
     public void initValidata() {
+        lv_left_menu.setAdapter(new LeftItemAdapter());
     }
-
+    @Override
     public void initListener() {
         drag_layout.setDragListener(new CustomDragListener());
         top_bar_icon.setOnClickListener(new CustomOnClickListener());
     }
+    @Override
     public void bindData() {
 
     }
