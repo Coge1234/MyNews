@@ -14,8 +14,8 @@ public interface DefineView {
     public void bindData();       //绑定数据
 
 //   public void getPageData();// show page
-//   public void getDataOk();  // data ok
-//   public void getDataError();// data error
-//   public void getDataRefresh();// data refresh
+//   public void getDataOk();  // DATA ok
+//   public void getDataError();// DATA error
+//   public void getDataRefresh();// DATA refresh
 
 }

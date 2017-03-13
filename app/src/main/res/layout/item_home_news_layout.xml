@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:layout_margin="10dp">
+
+        <com.example.mynews.widget.RoundAngleImageView
+            android:id="@+id/item_news_img_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/defaultbg"
+            app:roundHeight="10dp"
+            app:roundWidth="10dp"/>
+
+        <TextView
+            android:id="@+id/item_news_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/item_news_img_icon"
+            android:text="而水水"
+            android:textColor="@color/color_head_title"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/item_news_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/item_news_tv_name"
+            android:text="10分钟前"
+            android:textColor="@color/color_head_title"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/item_news_tv_arrow"
+            android:layout_width="3dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/mask_tags_12"/>
+
+        <TextView
+            android:id="@+id/item_news_tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/item_news_tv_arrow"
+            android:text="专栏"
+            android:textColor="@color/mask_tags_12"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+    <!--标题和LOGO图片-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_news_tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text="【每日投融资速递】极鱼科技、Airbnb等 17 家公司进行融资——2017.3.10"
+            android:textColor="@color/color_black"/>
+
+        <ImageView
+            android:id="@+id/item_news_tv_img"
+            android:layout_width="fill_parent"
+            android:layout_height="90dp"
+            android:layout_weight="2"
+            android:scaleType="fitXY"
+            android:src="@drawable/defaultbg"/>
+    </LinearLayout>
+</LinearLayout>

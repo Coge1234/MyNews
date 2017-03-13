@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+    <!--顶部导航栏布局-->
+    <include layout="@layout/details_top_bar_layout"/>
+    <!--中间内容各种布局-->
+    <RelativeLayout
+        android:id="@+id/relative_content"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <!--底部Bar功能-->
+        <RelativeLayout
+            android:id="@+id/layout_bottom_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/mask_tags_6">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="我是底部工具条"
+                android:textColor="@color/color_white"/>
+        </RelativeLayout>
+
+        <!--中间内容,文章内容-->
+        <WebView
+            android:id="@+id/details_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/layout_bottom_bar"
+            android:scrollbars="none"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/prompt_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+        <include layout="@layout/loading"/>
+
+        <include layout="@layout/empty"/>
+
+        <include layout="@layout/error"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/head_view"
+                android:layout_width="fill_parent"
+                android:layout_height="170dip">
+
+        <!-- 自动滑动gallery -->
+        <com.example.cwidgetutils.AutoGallery
+            android:id="@+id/headline_image_gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="170dip"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dp"
+            android:soundEffectsEnabled="false"/>
+        <!-- 滑动图片的指示器 -->
+        <com.example.cwidgetutils.FlowIndicator
+            android:id="@+id/headline_circle_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/headline_image_gallery"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="3.5dp"
+            app:radius="5dp"
+            app:space="2dp">
+        </com.example.cwidgetutils.FlowIndicator>
+
+</RelativeLayout>

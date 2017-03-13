@@ -2,6 +2,9 @@ package com.example.mynews.application;
 
 import android.app.Application;
 
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+
 /**
  * Created by Administrator on 2017/3/8.
  * 当前类注释:全局Application类,作为全局数据的配置以及相关参数数据初始化工作
@@ -14,8 +17,14 @@ public class NEWSApplication extends Application {
     public void onCreate() {
         super.onCreate();
         this.instance = this;
+        initImage();
     }
     public static NEWSApplication getInstance(){
         return instance;
+    }
+
+    private void initImage(){
+        ImageLoaderConfiguration configuration = ImageLoaderConfiguration.createDefault(this);
+        ImageLoader.getInstance().init(configuration);
     }
 }

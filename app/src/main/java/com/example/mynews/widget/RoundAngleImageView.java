@@ -14,9 +14,10 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
+
 import com.example.mynews.R;
 
-public class RoundAngleImageView extends ImageView {
+public class RoundAngleImageView extends android.support.v7.widget.AppCompatImageView {
     private Paint paint;
     private int roundWidth = 5;
     private int roundHeight = 5;

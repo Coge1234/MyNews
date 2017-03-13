@@ -2,6 +2,7 @@ package com.example.mynews.ui;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -46,6 +47,29 @@ public class MainActivity extends BaseActivity implements DefineView {
     public void initListener() {
         drag_layout.setDragListener(new CustomDragListener());
         top_bar_icon.setOnClickListener(new CustomOnClickListener());
+
+        lv_left_menu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 0:
+                        break;
+                    case 1:  //关注
+                        break;
+                    case 2: //收藏
+                        break;
+                    case 3: //意见反馈
+                        openActivity(SuggestActivity.class);
+                        break;
+                    case 4: //设置
+                        break;
+                    case 5: //关于我们
+                        openActivity(AboutActivity.class);
+                        break;
+                }
+            }
+        });
+
     }
     @Override
     public void bindData() {

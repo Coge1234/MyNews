@@ -12,6 +12,7 @@ public class CategoriesBean implements Serializable {
     private String data_type;//分类类型
 
     public CategoriesBean(String title, String href, String data_type) {
+        super();
         this.title = title;
         this.href = href;
         this.data_type = data_type;

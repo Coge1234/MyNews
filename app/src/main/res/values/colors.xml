@@ -9,7 +9,7 @@
     <color name="color_tab_title">#777777</color>
     <color name="color_transparent">#00000000</color>
     <color name="color_lv_selector">#aaeeeeee</color>
-
+    <color name="color_head_title">#AAAAAA</color>
 
     <!--标签背景颜色-->
     <color name="mask_tags_1">#f45170</color>
@@ -24,4 +24,6 @@
     <color name="mask_tags_10">#478de4</color>
     <color name="mask_tags_11">#ffa319</color>
     <color name="mask_tags_12">#f08945</color>
+    <color name="gray_light_s">#EDEDED</color>
+    <color name="gray_light_s2">#4d76a7</color>
 </resources>

@@ -23,6 +23,21 @@ public class BaseActivity extends FragmentActivity {
             //透明导航栏
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
+//
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//
+//            TypedValue typedValue = new TypedValue();
+//            Resources.Theme theme = getTheme();
+//            theme.resolveAttribute(R.attr.colorPrimary, typedValue, true);
+//            int color = typedValue.data;
+//
+//            Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.ic_activity_welcome);
+//            ActivityManager.TaskDescription td = new ActivityManager.TaskDescription(null, bm, color);
+//
+//            setTaskDescription(td);
+//            bm.recycle();
+//
+//        }
     }
 
     protected void openActivity(Class<?> pClass) {

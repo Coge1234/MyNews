@@ -1,16 +1,27 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.example.mynews.fragment.PageFragment">
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:textColor="@color/color_black"
-        android:id="@+id/tv_page"
-        android:text="我是子页面PageFragment..."
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/home_recyclerview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:gravity="center"/>
+        android:scrollbars="vertical"
+        />
 
-</FrameLayout>
+    <FrameLayout
+        android:id="@+id/prompt_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/loading"/>
+
+        <include layout="@layout/empty"/>
+
+        <include layout="@layout/error"/>
+    </FrameLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

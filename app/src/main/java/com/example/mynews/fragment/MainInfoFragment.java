@@ -55,7 +55,7 @@ public class MainInfoFragment extends BaseFragment implements DefineView, ViewPa
     public void initValidata() {
         fixedPagerAdapter = new FixedPagerAdapter(getChildFragmentManager());
         fixedPagerAdapter.setCategoriesBeen(categoriesBeans);
-        fragments = new ArrayList<>();
+        fragments = new ArrayList<Fragment>();
         for (int i = 0; i < categoriesBeans.size(); i++) {
             BaseFragment fragment = null;
             if (i == 0){
