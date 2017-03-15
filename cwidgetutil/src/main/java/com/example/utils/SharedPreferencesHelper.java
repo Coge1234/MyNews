@@ -3,7 +3,11 @@ package com.example.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-
+/**
+ * 当前类注释:当前为SharedPerferences进行封装基本的方法,SharedPerferences已经封装成单例模式
+ * 可以通过SharedPreferences sp=SharedPreferencesHelper.getInstances(FDApplication.getInstance())进行获取当前对象
+ * sp.putStringValue(key,value)进行使用
+ * */
 public class SharedPreferencesHelper {
     private static final String SHARED_PATH = "fda_shared";
     private static SharedPreferencesHelper instance;

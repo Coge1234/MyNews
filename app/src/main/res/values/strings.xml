@@ -4,4 +4,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_detailtemp">DetailtempActivity</string>
+    <string name="update_notice_finish">下载完成，点击浏览</string>
+    <string name="update_notice_nomemory">存储空间不足，请清理空间后，重新下载。</string>
+    <string name="update_notice_error">下载过程中出错，请重新下载。</string>
 </resources>
