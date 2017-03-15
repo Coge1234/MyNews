@@ -7,3 +7,13 @@
 <br>应用截图
 <br>
 <br>
+![](https://github.com/Coge1234/MyNews/raw/master/screenshot/1.jpg)
+<br>
+<br>
+![](https://github.com/Coge1234/MyNews/raw/master/screenshot/2.jpg)
+<br>
+<br>
+![](https://github.com/Coge1234/MyNews/raw/master/screenshot/3.jpg)
+<br>
+<br>
+![](https://github.com/Coge1234/MyNews/raw/master/screenshot/4.jpg)
